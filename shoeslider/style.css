@@ -1,0 +1,156 @@
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,body{
+    min-width: 100vw;
+    width: 100%;
+    overflow: hidden;
+}
+
+body{
+    min-height: 100vh;
+    height: 100vh;
+    
+    
+   
+}
+
+.section1{
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slider-bg{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.slider-bg-1{
+    position: absolute;
+    height: 900px;
+    width: 900px;
+    border-radius: 50%;
+    background-color: #004CA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.slider-bg-inner{
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+
+
+.slider-container{
+    width: 50%;
+    margin: auto;
+    position: absolute;
+
+}
+
+.slider-items{
+    height: 45vw;
+    margin: 50px 0 0;
+    position: relative;
+    list-style-type: none;
+}
+
+.slider-items li{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    top: 15%;
+    left: 50%;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 1.4s cubic-bezier(0.19,1, 0.22, 1 );
+}
+
+.slider-items li img{
+    width: 100%;
+    height: auto;
+    margin-top: 55%;
+    transform: scale(1.5) rotate(25deg);
+    transition: 0.25s;
+}
+
+
+
+
+.slider-items li.item-1{
+    z-index: 2;
+    transform: translateX(-50%) scale(2.5) translate3d(0,0,0);
+}
+
+.slider-items li.item-1 img{
+    transform: scale(1.0) rotate(5deg);
+}
+
+.slider-items li.item-2{
+    z-index: 1;
+    transform: translateX(-50%) scale(0.7) translate3d(240%,-10%,0);
+}
+.slider-items li.item-3{
+    z-index: 0;
+    transform: translateX(-50%) scale(0.5) translate3d(180%,-31%,0);
+}
+.slider-items li.item-4{
+    z-index: 0;
+    transform: translateX(-50%) scale(0.5) translate3d(-180%,-31%,0);
+}
+.slider-items li.item-5{
+    z-index: 1;
+    transform: translateX(-50%) scale(0.7) translate3d(-240%,-10%,0);
+}
+
+
+
+
+.slider-nav{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 45%;
+    border-top: 2px solid #009e5f;
+    border-right: 2px solid #009e5f;
+    border-bottom: none;
+    border-left: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+}
+
+ .next{
+    right: -47%;
+    transform: rotate(45deg);
+
+}
+
+.prev{
+    left: -47%;
+    transform: rotate(-135deg);
+}
+
